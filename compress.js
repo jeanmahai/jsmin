@@ -1,5 +1,11 @@
 /*
 node compress --folder d:/test
+
+http://closure-compiler.appspot.com/compile
+js_code:
+compilation_level:WHITESPACE_ONLY|Simple|Advanced
+output_format:text
+output_info:compiled_code
 */
 "use strict";
 
