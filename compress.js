@@ -48,6 +48,10 @@ function setFolder(){
 	}
 }
 setFolder();
+if(folder==""){
+	log("please input --folder");
+	return;
+}
 log("folder    "+folder);
 
 var js=[];
