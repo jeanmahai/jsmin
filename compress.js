@@ -1,5 +1,7 @@
 /*
 node compress --folder d:/test
+也可以直接写文件
+node compress --folder d:/test/test.js
 
 closure-compiler:需要代理才能访问
 http://closure-compiler.appspot.com/compile
@@ -75,7 +77,13 @@ function findAllJs(folder){
 		}
 	});
 }
-findAllJs(folder);
+var folderStat=FS.lstatSync(folder);
+if(folderStat.isDirectory()){
+	findAllJs(folder);
+}
+else{
+	js.push(folder);
+}
 
 function readJs(path){
 	return FS.readFileSync(path,"utf-8");
